@@ -1,0 +1,54 @@
+<div class="body">
+    <div class="card" style="width: 100%">
+      <div class="card-body">
+        <form class="form" [formGroup]="parameterForm">
+          <mat-form-field appearance="fill" class="element-flex">
+            <mat-label>Fecha Inicio</mat-label>
+            <input formControlName="fechaInicio" matInput [matDatepicker]="date1" />
+            <mat-hint>MM/DD/YYYY</mat-hint>
+            <mat-datepicker-toggle matIconSuffix [for]="date1"></mat-datepicker-toggle>
+            <mat-datepicker #date1></mat-datepicker>
+          </mat-form-field>
+  
+          <mat-form-field appearance="fill" class="element-flex">
+            <mat-label>Fecha Fin</mat-label>
+            <input formControlName="fechaFin" matInput [matDatepicker]="date2" />
+            <mat-hint>MM/DD/YYYY</mat-hint>
+            <mat-datepicker-toggle matIconSuffix [for]="date2"></mat-datepicker-toggle>
+            <mat-datepicker #date2></mat-datepicker>
+          </mat-form-field>
+  
+          <mat-form-field class="example-full-width" class="element-flex">
+            <mat-label>Codigo Empresa</mat-label>
+            <input type="number" formControlName="codEmpresa" matInput placeholder="" value="" />
+          </mat-form-field>
+  
+          <mat-form-field class="example-full-width" class="element-flex">
+            <mat-label>Codigo Sucursal</mat-label>
+            <input type="number" formControlName="codSucursal" matInput placeholder="" value="" />
+          </mat-form-field>
+  
+          <div class="button-section" style="display: flex; justify-content: center; width: 100%;">
+            <button (click)="viewPdf()" class="animate__animated animate__fadeInRight animate__delay-.2000s" matTooltip="Mostrar Reporte" style="background-color: #1F618D; color: #fff" mat-fab>
+                <mat-icon>remove_red_eye</mat-icon>
+            </button>
+            <button class="animate__animated animate__fadeInRight animate__delay-.2000s" matTooltip="Descargar Pdf" style="background-color: red; color: #fff" mat-fab>
+              <mat-icon>picture_as_pdf</mat-icon>
+            </button>
+            <button class="animate__animated animate__fadeInRight animate__delay-.2000s" matTooltip="Exportar a Excel" style="background-color: #27ae60; color: #fff" mat-fab>
+              <i class="fa-solid fa-file-excel" style="font-size: 1.5rem"></i>
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <div class="mt-4 pdf">
+        <pdf-viewer *ngIf="pdfSrc !== ''" [src]="pdfSrc"
+                  [render-text]="true"
+                  [original-size]="false"
+                  style="width: 100%; height: 700px;"
+        ></pdf-viewer>
+    </div>
+  </div>
+  

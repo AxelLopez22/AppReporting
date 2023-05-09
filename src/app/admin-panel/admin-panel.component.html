@@ -1,0 +1,52 @@
+<app-header (menuClicked)="sideNav.toggle()" style="position: fixed; width: 100%;"></app-header>
+
+<mat-sidenav-container style="margin-top: 57px;">
+    <mat-sidenav mode="over" #sideNav class="mat-elevation-z6" style="width: 250px;">
+      <app-side-nav></app-side-nav>
+    </mat-sidenav>
+    <mat-sidenav-content>
+      <router-outlet></router-outlet>
+    </mat-sidenav-content>
+  </mat-sidenav-container>
+
+<!-- <div class="sidebar-nav">
+    <nav class="navbar navbar-dark fixed-top" style="box-shadow: 5px; background-color: #1C2833;">
+        <div class="container">
+            
+            <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            
+            <div class="offcanvas offcanvas-start shadow" tabindex="3" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel" style="z-index: 1060;">
+              <div class="offcanvas-body">
+                    <ul class="navbar-nav">
+                        <li><a href="#"><i class="bi bi-calendar3" style="color: #1C2833;"></i> <span class="item-text" style="color: #1C2833;">Reporte Financiero</span></a></li>
+                        <li><a href="#"><i class="bi bi-pencil-square" style="color: #1C2833;"></i> <span class="item-text" style="color: #1C2833;">Applications</span></a></li>
+                        <li><a href="#"><i class="bi bi-people" style="color: #1C2833;"></i> <span class="item-text" style="color: #1C2833;">Audience</span></a></li>
+                        <li><a href="#"><i class="bi bi-book" style="color: #1C2833;"></i> <span class="item-text" style="color: #1C2833;">Books World</span></a></li>
+                        <li><a href="#"><i class="bi bi-person-check" style="color: #1C2833;"></i> <span class="item-text" style="color: #1C2833;">Candidates</span></a></li>
+                        <li><a href="#"><i class="bi bi-envelope" style="color: #1C2833;"></i> <span class="item-text" style="color: #1C2833;">Email</span></a></li>
+                        <li><a href="#"><i class="bi bi-graph-up" style="color: #1C2833;"></i> <span class="item-text" style="color: #1C2833;">Analytics</span></a></li>
+                    </ul>
+              </div>
+            </div>
+            <div class="btn-group">
+                <a href="#" class="dropdown-toggle text-white text-decoration-none" tabindex="2" data-bs-toggle="dropdown" aria-expanded="false">
+                    <span class="usericon"><i class="bi bi-person-circle"></i></span>
+                    <span class="textnone">Axel</span>
+                </a>
+                <ul class="dropdown-menu dropdown-menu-end">
+                    <li><button class="dropdown-item" type="button"><i class="bi bi-lock-fill"></i> Change Password</button></li>
+                    <li><button class="dropdown-item" type="button"><i class="bi bi-gear-fill"></i> Admin Setion</button></li>
+                    <li><button class="dropdown-item" type="button"><i class="bi bi-gear-wide-connected"></i> IMAP Settings</button></li>
+                    <li><hr class="dropdown-divider"></li>
+                    <li><button class="dropdown-item" type="button"><i class="bi bi-box-arrow-right"></i> Sign out</button></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+  </div>
+  
+  <div class="container-body">
+    <router-outlet></router-outlet>
+  </div> -->

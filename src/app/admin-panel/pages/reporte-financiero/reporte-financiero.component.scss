@@ -1,0 +1,40 @@
+.body{
+    display: flex;
+    height: 100%;
+    margin: 1rem 1rem 1rem 1rem;
+    flex-direction: column;
+}
+
+.form{
+    display: flex;
+    flex-wrap: wrap;
+    align-content: flex-start;
+    gap: 10px;
+}
+
+.element-flex{
+    flex-basis: 200px;
+    flex-grow: 1;
+}
+
+.button-section button{
+    margin: 0 10px 0 10px;
+}
+
+.button-section button:hover{
+    box-shadow: 5px 5px 10px #566573;
+}
+
+.pdf{
+    display: flex; 
+    justify-content: center; 
+    margin: auto; width: 100%; 
+    border: #CCD1D1 1px solid;
+    border-radius: 10px;
+}
+
+  @media (max-width: 600px) {
+    mat-form-field {
+        width: 100%;
+    }
+  }
